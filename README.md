@@ -54,4 +54,4 @@ npm  run test
 ```
 
 ###warning:
-in the case of security issues, we shouldnt have committed the private key and public key. but regarding the test I checkout.
+in the case of security issues, we should nt have committed the private key and public key and .env as well. but regarding the test I checkout.
