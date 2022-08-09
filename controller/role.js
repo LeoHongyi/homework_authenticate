@@ -43,7 +43,8 @@ exports.checkRole = (req, res, next) => {
       message = `{username} does not have any roles`
     }
     const match = user[0].roles.filter(role => role.roleName === roleName)
-    if (match[0] && match.length > 0) {
+    const roleMatch= dbRole.dbRole.filter(role => role.roleName === roleName)
+    if (match[0] && match.length > 0 && roleMatch) {
       message = `${roleName} belongs to ${username}`
     }
     res.status(200).json({
